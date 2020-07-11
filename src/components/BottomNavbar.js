@@ -1,10 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './BottomNavbar.css';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import RestoreIcon from '@material-ui/icons/Restore';
+import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
 import ListAltIcon from '@material-ui/icons/ListAlt';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
 
 const SimpleBottomNavigation = () => {
   const [value, setValue] = React.useState(0);
@@ -18,9 +18,8 @@ const SimpleBottomNavigation = () => {
       showLabels
       className="bottomNav"
     >
-      <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-      <BottomNavigationAction label="Sign up" icon={<ListAltIcon />} />
-      <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+      <BottomNavigationAction label="Cars" icon={<PhotoCameraIcon />} component={Link} to="/" />
+      <BottomNavigationAction label="Sign up" icon={<ListAltIcon />} component={Link} to="/Form" />
     </BottomNavigation>
   );
 }
