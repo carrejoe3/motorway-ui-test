@@ -10,6 +10,7 @@ const randomInterval = (min, max) => {
 app.get('/images', ({ query }, res) => {
   const i = (query.limit) ? images.slice(0, parseInt(query.limit)) : images;
 
+  // change this to a promise rather than a timeout
   setTimeout(() => {
     return res.status(200).json(i);
   }, randomInterval(500, 1500));
