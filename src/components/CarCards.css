@@ -13,3 +13,14 @@ img.carImage {
   cursor: pointer;
   background-position: bottom;
 }
+
+div.avatarContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+div.profilePic {
+  height: 100px;
+  width: 100px;
+}

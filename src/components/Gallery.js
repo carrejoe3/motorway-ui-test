@@ -21,7 +21,7 @@ const Gallery = () => {
     <div className='grid'>
       {
         images && images.map(img => (
-          <CarCards key={img.id} imgSrc={img.url} />
+          <CarCards key={img.id} img={img} />
         ))
       }
     </div>
